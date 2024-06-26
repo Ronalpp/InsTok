@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search-bar {
+  width: 100%;
+  height: 60px;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0px 5px 0.5px;
+  gap: rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0rem; /* Ajusta este valor para cambiar el espacio entre el logo y el h1 */
+}
+
+.search-bar form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar form input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid #007bff;
+  border-radius: 1rem;
+}
+
+.search-bar form button {
+  background: #EDEDED;
+  padding: 0.5rem 1rem;
+  color: #202020;
+  border-radius: 0.5rem;
+  border: 1px solid #007bff;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
+.topics {
+  margin: 2rem 0;
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filter {
+  background: #EDEDED;
+  padding: 0.5rem 1rem;
+  color: #202020;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.filter.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.photo-grid {
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.photo-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.photo-item .photo-details {
+  width: 100%;
+  height: 110%;
+  padding: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 300ms ease;
+  position: absolute;
+}
+
+.photo-item .photo-details:hover {
+  height: 100%;
+  background: #00000090;
+  opacity: 1;
+}
+
+.photo-item .photo-details img {
+  width: 2rem;
+  height: auto;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: optimizeQuality;
+}
+
+.photo-item .photo-details .author-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.photo-item .photo-details .author-name {
+  color: #FFF;
+}
+
+.photo-item .photo-details .view-full-size {
+  color: #FFF;
+}
+
+.photo-item .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  top: 1rem;
+  right: 1rem;
+  transform: translateY(-50px);
+  transition: all 300ms ease;
+  position: absolute;
+}
+
+.photo-item .photo-details:hover .button-container {
+  transform: translateY(0);
+}
+
+.photo-item .button-container button,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-decoration: none;
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.photo-item .button-container button:hover,
+a:hover {
+  transform: scale(0.95);
+}
+
+.btn-container {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .search-bar {
+    padding: 0 2%;
+  }
+
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .topics {
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    padding: 0 5%;
+  }
+
+  .search-bar form input {
+    width: 40vw;
+  }
+
+  .topics {
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.Logo {
+  width: 60px; /* Ajusta el ancho de la imagen */
+}
+
+.Logo:hover {
+  transform: scale(1.1); /* Efecto hover para agrandar la imagen */
+  transition: transform 0.3s ease;
+}

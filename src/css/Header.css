@@ -1,0 +1,16 @@
+.custom-header {
+    width: 100%;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-header a {
+    background: none;
+    padding: 0;
+}
+
+.custom-header .title {
+    flex-grow: 1;
+    text-align: center;
+}
