@@ -1,15 +1,15 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import PhotoDetailPage from './pages/PhotoDetail.jsx';
 
 function App() {
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
-                <Route index path='/' element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/photo-detail/:id" element={<PhotoDetailPage />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 }
 
