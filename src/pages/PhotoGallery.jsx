@@ -151,7 +151,7 @@ function PhotoGallery() {
                                     <button onClick={() => downloadPhoto(photo.urls.full)}>
                                         <box-icon type='solid' name='download' color='#202020'></box-icon>
                                     </button>
-                                    <a href={`/photo-detail/${photo.id}`} className="view-full-size">
+                                    <a href={`photodetail/${photo.id}`} className="view-full-size">
                                         <box-icon name='send' type='solid' color='#202020'></box-icon>
                                     </a>
                                 </div>
